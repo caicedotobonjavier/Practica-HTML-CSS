@@ -1,0 +1,200 @@
+/* en esta parte es las configuracion generales, quito todas las margenes, todas los espacion o padding y quito
+todos los estilos por defecto con box-sizing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* en este parte del body configuro el tipo de letra, el tamaño de la letra y el color de fondo del body*/
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    background-color: #fff;
+}
+
+
+/* encabezado
+
+color de fondo, alineacion de texto, margenes 5px arriba y abajo y cero derecha izquierda, */
+
+.header{
+    background-color: #253062;
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+/* color blanco, margenes o pading seria 10px arriba y abajo y cero para derecha izquierda, 
+texto en mayuscula con ippercase*/
+.header-title{
+    color: #fff;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+/* color blanco, margenes o pading seria 10px arriba y abajo y cero para derecha izquierda*/
+.header-description{
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* centro el texto, y margenes de 10px arriba y abajo y cero derecha izquierda*/
+.answer{
+    text-align: center;
+    padding: 10px 0;    
+}
+
+/*ingreso a la etiqueta p de answer, tamaño de letra 25, texto en negrita*/
+.answer p{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/*CONTENEDOR DE LAS FIGURAS*/
+
+/*ancho de 90%, margen auto para que se centre, margenes de 10px, y overflow para que respete
+el contendero padre, ocupamos el 1000px de todo el navegador*/
+
+.figures{
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+
+/*CASILLAS O CAJAS*/
+
+/* tamaño 30%, alto 600px*, borde de 3px solido y color azul, borde redondeado de 10px, margen de 15px,
+agregamos flotante left para que las cajas que agrege queden asi la izquierda una tras otra esto sucede por
+haberle puesto en la clase de arriba figures overflow hidden*/
+.box{
+    width: 30%;
+    height: 600px;
+    border: 3px solid #253062;
+    border-radius: 10px;
+    margin: 15px;
+    float: left;
+}
+
+/*ENCABEZADO Y MAIN DE LA CAJA*/
+
+
+/*color de fondo azul, margen o padin 15px arriba y abajo cero para izquierda derecha, texto alineado centro,
+color blanco texto*/
+.box-header{
+    background-color: #253062;
+    padding: 15px 0;
+    text-align: center;
+    color: #fff;
+}
+
+
+/*texto alineado centro, relleno o paddin 10px arriba y abaho*/
+.box-main{
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*tamaño de letra 20px, letra en negrita*/
+.box-main__text{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/*alto 40 px, ancho 200px, tamaño letra 18px, letra en negrita, el display es para que queden en linea input y botones,
+margen de 10px arriba abajo izquierda derecha, relleno o padding 10px, color de letra input azul, borde azul solido
+y borde redondeado 5px*/
+.box-main__input{
+    height: 40px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    color: #253062;
+    border: solid #253062;
+    border-radius: 5px;
+}
+
+
+/*color de fondo azul, color letra blanco, ancho 120px, tamaño letra 18px, paddin esto es el espacio dentro 10px,
+texto alineado centro, margenes de 10px, le quito el borde con border-style none, y le pondo bordes redondeados de 10px*/
+.box-main__btn{
+    background-color: #253062;
+    color: #fff;
+    width: 120px;
+    font-size: 18px;    
+    padding: 10px;
+    text-align: center;
+    margin: 5px;
+    border-style: none;
+    border-radius: 10px;    
+}
+
+/* con hovewr lo que hago es que cambie el comportamiento del boton apenas este el mouse sobre el, en este caso hace esto:
+cambia de color a un azul mas claro, cambia el cursor a manito*/
+.box-main__btn:hover{
+    background: #1b2550;
+    cursor: pointer;
+}
+
+/*con :active es cuando hago click sobre el boton entonces cambia de color que le asigne*/
+.box-main__btn:active{
+    background-color: #4c5580;
+}
+
+
+/*WEB RESPONSIVE*/
+
+@media screen and (max-width:1021px){
+    .figures{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:800px){
+    .box{
+        margin: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width:360px){   
+
+    .box{
+        width: 90%;
+        margin: 25px;
+        height: auto;
+    }
+    
+}
+
+
+@media screen and (max-width:640px){   
+
+    .box{
+        width: 90%;
+        margin: 20px;
+        height: auto;
+    }
+
+    .answer p{
+        font-size: 18px;
+    }
+    
+    .header-title{
+        font-size: 30px;
+    }
+}
+
+
